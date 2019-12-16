@@ -1,0 +1,19 @@
+{
+  "name": "mws-practice",
+  "version": "1.0.0",
+  "description": "Practice for Google MWS certification exam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "google",
+    "mws",
+    "growwithgoogle",
+    "andela",
+    "alc",
+    "alc4"
+  ],
+  "author": "Tony Eneh",
+  "license": "ISC"
+}

@@ -118,8 +118,8 @@
     grid-row-start: 1;
     grid-row-end: 3;
     position: absolute;
-    top: 40px;
+    top: 120px;
     left: 40px;
     /*make the div span the whole space assigned to it*/
-    width: 100%;
+    /* width: 100%; */
 }

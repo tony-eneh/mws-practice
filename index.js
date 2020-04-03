@@ -2,10 +2,10 @@ const readAsText = response => response.text();
 const logResponse = response => console.log `server response ${response}`;
 const logError = error => console.error `server error response ${error}`;
 
-fetch('http://localhost:3000', { method: 'HEAD' })
-    // .then(readAsText)
-    .then(logResponse)
-    .catch(logError)
+// fetch('http://localhost:3000', { method: 'HEAD' })
+//     // .then(readAsText)
+//     .then(logResponse)
+//     .catch(logError)
 
 //food-menu section
 const handleFoodMenuItemClick = (e) => {
@@ -27,3 +27,25 @@ menuItems.forEach((item) => {
     //prevent text selection on click
     item.addEventListener('mousedown', e => e.preventDefault());
 });
+
+//register serviceWorker for push notification test
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+        .then(swReg => {
+            console.log('service worker registration successful', swReg);
+        })
+        .catch(err => {
+            console.error('service worker registration error', err);
+        });
+}
+
+//request permission
+if (window.Notification) {
+    Notification.requestPermission()
+        .then(status => {
+            console.log('Notification request made, status:', status);
+        })
+        .catch(error => {
+            console.error('Notification request couldn\'t complete', error);
+        })
+}

@@ -84,3 +84,17 @@
         width: 90%;
     }
 }
+
+#grid {
+    background-color: seagreen;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 5rem;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#grid>* {
+    border: 2px solid salmon;
+    border-radius: 5px;
+}
